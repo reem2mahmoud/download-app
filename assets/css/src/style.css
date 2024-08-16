@@ -63,7 +63,7 @@ END :: NAVBAR
 START:: SITE-DATA
 ==========================================*/
 main .site_main{
-    height : calc(100vh - 130px) ;
+    min-height : calc(100vh - 130px) ;
 }
 main .site_details h1{
   font-size : 90px ;
@@ -94,22 +94,29 @@ main .site_details .apps a:hover #app_svg path{
 
 main .app_mockup{
     height: 550px  ;
+    background-color : var(--sub-main-color) ;
+    border-radius: 100% ;
     padding-bottom:0 ;
+
 }
 main .app_mockup img{
     height: 100% ;
-    width : 80% ; 
+    width : 65% ; 
     margin-bottom:0 ;
 }
 @media screen and (max-width:1400px){
     main .app_mockup{
         height: 530px  ;
     }
+    main .app_mockup img{
+        width : 70% ; 
+    }
 }
 @media screen and (max-width:1200px){
     main .app_mockup{
         height: 520px  ;
     }
+  
 }
 @media screen and (max-width:992px){
     main .site_details h1{
@@ -117,6 +124,12 @@ main .app_mockup img{
       }
     main .site_details p{
         font-size: 25px ;
+    }
+    main .site_details .apps a{
+        padding :8px 10px ;
+    }
+    main .app_mockup img{
+        width : 100% ;
     }
 }
 @media screen and (max-width:768px){

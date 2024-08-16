@@ -49,7 +49,7 @@ nav .language a{
      color : var(--second-color);
      border: 1px solid var(--second-color ) ;
      border-radius : 20px ;
-     padding :5px  20px 
+     padding :5px  25px 
 }
 nav .language a:hover{
     color : var(--white-color);
@@ -63,7 +63,7 @@ END :: NAVBAR
 START:: SITE-DATA
 ==========================================*/
 main .site_main{
-    height : calc(100vh - 100px) ;
+    height : calc(100vh - 130px) ;
 }
 main .site_details h1{
   font-size : 90px ;
@@ -80,7 +80,7 @@ main .site_details #slogon{
 main .site_details .apps a{
     background-color : var(--second-color)  ;
     border-radius : 20px ;
-    padding-inline : 20px ;
+    padding :8px 30px ;
     color : var(--white-color)
 }
 main .site_details .apps a:hover{

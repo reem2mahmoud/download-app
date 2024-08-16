@@ -1,0 +1,143 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --main-color: #005895;
+    --sub-main-color: #00ACD9;
+    --second-color : #F59120;
+    --third-color: #778996 ;
+    --white-color : #FFFFFF
+  }
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-transform: capitalize;
+  }
+  
+  html {
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+  a{
+    text-decoration: none !important;
+  }
+  
+/* -==================================
+START:: NAVBAR
+==========================================*/
+nav .logo{
+    height:90% ;
+}
+nav .logo img{
+    width: 20% ; 
+}
+nav .logo span{
+    color : var( --main-color) ;
+    font-weight : 500 ; 
+    font-size : 30px  ;
+}
+nav .language a{
+     font-size : 22px ;
+     font-weight : 500 ;
+     color : var(--second-color);
+     border: 1px solid var(--second-color ) ;
+     border-radius : 20px ;
+     padding :5px  20px 
+}
+nav .language a:hover{
+    color : var(--white-color);
+    background-color: var(--second-color ) ;
+    border: 1px solid var(--second-color ) ;
+}
+/* -==================================
+END :: NAVBAR
+==========================================*/
+/* -==================================
+START:: SITE-DATA
+==========================================*/
+main .site_details h1{
+  font-size : 90px ;
+  font-weight : 600 ;
+  font-family: "Lobster Two", sans-serif;
+  color : var(--main-color);
+  
+}
+main .site_details #slogon{
+    font-size: 30px ;
+    font-weight: 400;
+    color : var(--third-color)
+}
+main .site_details .apps a{
+    background-color : var(--second-color)  ;
+    border-radius : 20px ;
+    padding-inline : 20px ;
+    color : var(--white-color)
+}
+main .site_details .apps a:hover{
+    background-color : var(--white-color)  ;
+    color : var(--second-color) ;
+    border :  1px solid var(--second-color)
+}
+main .site_details .apps a:hover #app_svg path{
+    fill : var(--second-color)
+}
+
+main .app_mockup{
+    height: 510px 
+}
+main .app_mockup img{
+    height: 100% ;
+    width : 90% ; 
+}
+@media screen and (max-width:992px){
+    main .site_details h1{
+        font-size : 70px ;     
+      }
+    main .site_details p{
+        font-size: 25px ;
+    }
+}
+@media screen and (max-width:768px){
+    main .site_details h1{
+        font-size : 60px ;     
+      }
+    main .site_details p{
+        font-size: 20px ;
+    }
+    main .app_mockup{
+        height: 540px 
+    }
+    main .app_mockup img{
+        width : 70% ; 
+    }
+}
+@media screen and (max-width:576px){
+    main .site_details h1{
+        font-size : 50px ;     
+      }
+    main .site_details p{
+        font-size: 18px ;
+    }
+    main .site_details .apps a{
+        padding-inline : 10px ;
+    }
+}
+@media screen and (max-width:430px){
+    main .site_details h1{
+        font-size : 40px ;     
+      }
+    main .site_details p{
+        font-size: 16px ;
+    }
+    main .app_mockup img{
+        width : 90% ; 
+    }
+    
+}
+/* -==================================
+START:: SITE-DATA
+==========================================*/

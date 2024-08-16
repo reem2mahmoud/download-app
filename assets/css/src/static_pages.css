@@ -1,0 +1,43 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --main-color: #005895;
+    --sub-main-color: #00ACD9;
+    --second-color : #F59120;
+    --third-color: #778996 ;
+    --white-color : #FFFFFF
+  }
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-transform: capitalize;
+  }
+  
+  html {
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+  
+/* -==================================
+START:: STATIC-PAGES
+==========================================*/
+.static_data{
+    margin-top:15px
+}
+.static_data h4{
+    font-size: 16px;
+   text-decoration: underline;
+   margin-block : 1px !important ;
+   font-weight: 600;
+}
+.static_data ol li , .static_data p{
+    font-size: 14px;
+}
+/* -==================================
+END:: STATIC-PAGES
+==========================================*/

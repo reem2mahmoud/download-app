@@ -10,6 +10,7 @@
     --sub-main-color: #00ACD9;
     --second-color : #F59120;
     --third-color: #778996 ;
+    --forth-color : #EE7E00;
     --white-color : #FFFFFF
   }
   body {
@@ -36,18 +37,14 @@ nav .logo{
     height:90% ;
 }
 nav .logo img{
-    width: 20% ; 
+    width: 25% ; 
 }
 nav .logo span{
     color : var( --main-color) ;
     font-weight : 500 ; 
     font-size : 30px  ;
 }
-nav .language a:hover{
-     color : var(--second-color);
-     border: 1px solid var(--second-color ) ;
-     background-color: var(--white-color ) ;
-}
+
 nav .language a{
     font-size : 22px ;
     font-weight : 500 ;
@@ -55,7 +52,11 @@ nav .language a{
     background-color: var(--second-color ) ;
     border: 1px solid var(--second-color ) ;
     border-radius : 20px ;
-    padding :5px  25px 
+    padding :5px  30px 
+}
+nav .language a:hover{
+    background-color : var(--forth-color)  ;
+    color : var(--white-color) ;
 }
 /* -==================================
 END :: NAVBAR
@@ -69,29 +70,34 @@ main .site_main{
 main .site_details h1{
   font-size : 90px ;
   font-weight : 600 ;
-  font-family: "Lobster Two", sans-serif;
+  font-family: "Rowdies", sans-serif;
   color : var(--main-color);
   
 }
 main .site_details #slogon{
     font-size: 30px ;
-    font-weight: 400;
-    color : var(--third-color)
+    font-weight: 500;
+    color : var(--third-color) ;
+    font-family: "Spline Sans Mono", monospace;
 }
 main .site_details .apps a{
     background-color : var(--second-color)  ;
     border-radius : 20px ;
+    font-weight: 500;
+    font-size:19px;
     padding :8px 30px ;
     color : var(--white-color)
 }
 main .site_details .apps a:hover{
-    background-color : var(--white-color)  ;
+
+    /* background-color : var(--white-color)  ;
     color : var(--second-color) ;
-    border :  1px solid var(--second-color)
+    border :  1px solid var(--second-color) */
+
+    background-color : var(--forth-color)  ;
+    color : var(--white-color) ;
 }
-main .site_details .apps a:hover #app_svg path{
-    fill : var(--second-color)
-}
+
 
 main .app_mockup{
     height: 550px  ;
@@ -109,7 +115,7 @@ main .app_mockup img{
     right: 0;
     width: 70%;
     height: 100%;
-    background-image: url(/assets/images/header-shape-1.svg);
+    background-image: url(../../images/header-shape-1.svg);
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;

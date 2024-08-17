@@ -1,0 +1,11 @@
+.header-shape-1 {
+    right: auto;
+    left: 0;
+    transform : rotateY(180deg)
+}
+
+.header-shape-2 {
+    right: auto;
+    left:0 ;
+    transform : rotateY(180deg)
+}

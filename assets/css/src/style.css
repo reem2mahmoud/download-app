@@ -43,18 +43,19 @@ nav .logo span{
     font-weight : 500 ; 
     font-size : 30px  ;
 }
-nav .language a{
-     font-size : 22px ;
-     font-weight : 500 ;
+nav .language a:hover{
      color : var(--second-color);
      border: 1px solid var(--second-color ) ;
-     border-radius : 20px ;
-     padding :5px  25px 
+     background-color: var(--white-color ) ;
 }
-nav .language a:hover{
+nav .language a{
+    font-size : 22px ;
+    font-weight : 500 ;
     color : var(--white-color);
     background-color: var(--second-color ) ;
     border: 1px solid var(--second-color ) ;
+    border-radius : 20px ;
+    padding :5px  25px 
 }
 /* -==================================
 END :: NAVBAR
@@ -94,22 +95,39 @@ main .site_details .apps a:hover #app_svg path{
 
 main .app_mockup{
     height: 550px  ;
-    background-color : var(--sub-main-color) ;
-    border-radius: 100% ;
     padding-bottom:0 ;
 
 }
 main .app_mockup img{
     height: 100% ;
-    width : 65% ; 
+    width : 60% ; 
     margin-bottom:0 ;
+}
+.header-shape-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-image: url(/assets/images/header-shape-1.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.header-shape-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
 }
 @media screen and (max-width:1400px){
     main .app_mockup{
         height: 530px  ;
     }
     main .app_mockup img{
-        width : 70% ; 
+        width : 65% ; 
     }
 }
 @media screen and (max-width:1200px){
@@ -143,7 +161,10 @@ main .app_mockup img{
         height: 540px 
     }
     main .app_mockup img{
-        width : 70% ; 
+        width : 60% ; 
+    }
+    .header-shape-1{
+        display: none;
     }
 }
 @media screen and (max-width:576px){
@@ -156,6 +177,15 @@ main .app_mockup img{
     main .site_details .apps a{
         padding-inline : 10px ;
     }
+    main .app_mockup img{
+        width : 55% ; 
+    }
+   
+}
+@media screen and (max-width:470px){
+    main .app_mockup img{
+        width : 70% ; 
+    }
 }
 @media screen and (max-width:430px){
     main .site_details h1{
@@ -165,7 +195,7 @@ main .app_mockup img{
         font-size: 16px ;
     }
     main .app_mockup img{
-        width : 90% ; 
+        width : 80% ; 
     }
     
 }

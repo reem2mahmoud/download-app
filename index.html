@@ -21,39 +21,66 @@
     />
     <!--Bootstrap  -->
     <link rel="stylesheet" href="assets/css/layout/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/layout/slick.css" />
+    <link rel="stylesheet" href="assets/css/layout/slick-theme.css" />
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/src/style.css" />
   </head>
   <body>
     <!-- START : NAVBAR -->
-    <nav>
-      <div
-        class="mt-2 container d-flex justify-content-between align-items-center"
-      >
-        <a class="logo d-flex align-items-center gap-2" href="#">
-          <img src="assets/images/Logo.svg" alt="logo" />
-          <span>Ahlan</span>
-        </a>
-        <div class="language">
-          <a href="./index-ar.html">العربية</a>
+    <div class="mt-2 container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="logo navbar-brand" href="./index-ar.html">
+            <img src="assets/images/Logo.svg" alt="logo" />
+            <span>Ahlan</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav ms-auto d-flex gap-3 justify-content-center align-items-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">services</a>
+              </li>
+              <li class="nav-item ms-lg-5">
+                <a class="nav-link language ms-lg-5" href="./index-ar.html"
+                  >العربية</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- END : NAVBAR -->
     <!-- START : SITE-DATA -->
     <main>
-      <div class="container">
+      <div class="pb-0 mb-0 container">
         <div
-          class="site_main d-flex justify-content-center justify-content-md-between row"
+          class="site_main d-flex justify-content-center justify-content-lg-between row mb-0"
         >
           <!-- SLOGON -->
           <div
-            class="site_details col-md-7 col-lg-7 pt-5 text-center text-md-start"
+            class="position-relative site_details col-lg-7 pt-5 text-center text-lg-start"
           >
             <h1 class="mt-5 mb-3 app_name">Ahlan Chat</h1>
             <p id="slogon">work hard , party harder</p>
             <div
-              class="apps d-flex gap-4 my-4 justify-content-center justify-content-md-start"
+              class="apps d-flex gap-4 my-4 justify-content-center justify-content-lg-start"
             >
               <a class="btn app_store d-flex" type="button" href="#">
                 <svg
@@ -161,14 +188,41 @@
                 <p class="mb-0 mt-1 mx-1">Google Play</p>
               </a>
             </div>
+            <footer
+              class="d-none d-lg-block pb-4 w-100 position-absolute bottom-0"
+            >
+              <div
+                class="d-flex flex-column justify-content-center align-items-center"
+              >
+                <p class="mb-0">Copyright &copy; @livechat</p>
+                <div>
+                  <a href="pages/terms_of_service.html">terms of service</a>
+                  <span class="mx-3">|</span>
+                  <a href="pages/privacy_policy.html">privacy policy</a
+                  ><span class="mx-3">|</span>
+                  <a href="pages/about_site.html">About site</a>
+                </div>
+              </div>
+            </footer>
           </div>
           <!-- MOCK-UP -->
-          <div class="app_mockup col-md-5 col-lg-5 text-center">
-            <img src="assets/images/mockup1.png" alt="app-mockup" />
+          <div class="app_mockup col-lg-5 mb-0">
+            <div class="slider_items">
+              <img src="assets/images/mockup3.png" alt="" />
+              <p class="text-center mx-4">Lorem ipsum dolor sit amet11 .</p>
+            </div>
+            <div class="slider_items">
+              <img src="assets/images/mockup3.png" alt="" />
+              <p class="text-center mx-4">Lorem ipsum dolor sit amet22.</p>
+            </div>
+            <div class="slider_items">
+              <img src="assets/images/mockup3.png" alt="" />
+              <p class="text-center mx-4">Lorem ipsum dolor sit amet33.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container pb-0 mb-0">
         <div class="header-shape-1"></div>
         <div class="header-shape-2">
           <img src="assets/images/header-shape-2.svg" alt="" />
@@ -178,7 +232,9 @@
     <!-- END : SITE-DATA -->
     <!-- START : FOOTER -->
     <footer>
-      <div class="d-flex flex-column justify-content-center align-items-center">
+      <div
+        class="d-block d-lg-none d-flex flex-column justify-content-center align-items-center"
+      >
         <p class="mb-0">Copyright &copy; @livechat</p>
         <div>
           <a href="pages/terms_of_service.html">terms of service</a>
@@ -190,5 +246,26 @@
       </div>
     </footer>
     <!-- END : FOOTER -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+      $(".nav-link").on("click", function () {
+        $(".nav-link.active").removeClass("active");
+        $(this).addClass("active");
+      });
+      $(document).ready(function () {
+        $(".app_mockup").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          vertical: true,
+          arrows: false,
+          verticalSwiping: true,
+          autoplay: true,
+          speed: 300,
+        });
+      });
+    </script>
   </body>
 </html>

@@ -11,11 +11,13 @@
     --second-color : #F59120;
     --third-color: #778996 ;
     --forth-color : #EE7E00;
-    --white-color : #FFFFFF
+    --white-color : #FFFFFF ;
+
   }
   body {
-    min-height: 100vh;
+    height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
     text-transform: capitalize;
   }
   
@@ -26,7 +28,52 @@
   a{
     text-decoration: none !important;
   }
-  
+  ul{
+    list-style: none;
+  }
+
+   .slick-slider{
+    position: relative;
+   }
+  .slick-dots
+  {
+      width: auto;
+      height: fit-content;
+      left:90% ;
+      list-style: none;
+      position: absolute;
+      top: 50%;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+   
+  }
+  .slick-dots li
+  {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+      margin-block: 10px;
+  }
+  .slick-dots li button
+  {
+      font-size: 0;
+      line-height: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: white;
+  }
+  .slick-dots li.slick-active button
+  {
+    background: var(--forth-color)
+  }
 /* -==================================
 START:: NAVBAR
 ==========================================*/
@@ -44,17 +91,42 @@ nav .logo span{
     font-weight : 500 ; 
     font-size : 30px  ;
 }
-
-nav .language a{
-    font-size : 22px ;
+nav .navbar-nav .nav-item{
+    position: relative;
+}
+nav  .navbar-nav .nav-item .nav-link{
+    font-size : 20px ;
     font-weight : 500 ;
+    color : var(--white-color);
+}
+nav .navbar-nav .nav-item .nav-link.active{
+    color :var(--forth-color)
+}
+nav  .navbar-nav .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    opacity: 0;
+    transition: all .3 ease-out 0s;
+}
+nav  .navbar-nav .nav-item .nav-link.active::before{
+    opacity: 1;
+}
+nav  .navbar-nav .nav-item .nav-link.language {
+    display: inline;
+    font-size : 22px ;
     color : var(--white-color);
     background-color: var(--second-color ) ;
     border: 1px solid var(--second-color ) ;
     border-radius : 20px ;
-    padding :5px  30px 
+    padding :3px  30px 
 }
-nav .language a:hover{
+nav  .language a:hover{
     background-color : var(--forth-color)  ;
     color : var(--white-color) ;
 }
@@ -64,9 +136,6 @@ END :: NAVBAR
 /* -==================================
 START:: SITE-DATA
 ==========================================*/
-main .site_main{
-    min-height : calc(100vh - 130px) ;
-}
 main .site_details h1{
   font-size : 90px ;
   font-weight : 600 ;
@@ -89,25 +158,25 @@ main .site_details .apps a{
     color : var(--white-color)
 }
 main .site_details .apps a:hover{
-
-    /* background-color : var(--white-color)  ;
-    color : var(--second-color) ;
-    border :  1px solid var(--second-color) */
-
     background-color : var(--forth-color)  ;
     color : var(--white-color) ;
 }
 
-
 main .app_mockup{
-    height: 550px  ;
+    height:100% ;
     padding-bottom:0 ;
 
 }
-main .app_mockup img{
+main .app_mockup .slider_items img{
     height: 100% ;
     width : 60% ; 
     margin-bottom:0 ;
+    margin : 0  auto
+}
+main .app_mockup .slider_items p{
+  font-size : 15px ;
+  font-weight: 500;
+ 
 }
 .header-shape-1 {
     position: absolute;
@@ -128,86 +197,103 @@ main .app_mockup img{
     right: 0;
     z-index: -1;
 }
-@media screen and (max-width:1400px){
-    main .app_mockup{
-        height: 530px  ;
+
+@media screen and (max-width:992px){
+    body{
+        height: auto;
     }
-    main .app_mockup img{
-        width : 65% ; 
+    main .site_details h1{
+        font-size : 50px ;     
+      }
+    main .site_details #slogan{
+        font-size: 20px ;
     }
-}
-@media screen and (max-width:1200px){
-    main .app_mockup{
-        height: 520px  ;
+    main .site_details .apps a{
+        font-size:16px !important;
+        padding :8px 10px ;
+    }
+    .slick-dots li button
+    {
+        background: var(--third-color);
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 130%;
+        left: 0;
+        width: 100%;
+        padding: 10px 12px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 15px 20px 0 rgb(0 0 0 / 10%);
+        z-index:1 
+    }
+    nav .navbar-toggler{
+        border:none 
+    }
+    nav  .navbar-nav .nav-item .nav-link{
+        color : var(--third-color);
+    }
+    nav .navbar-nav .nav-item .nav-link.active{
+        color :var(--forth-color)
+    }
+    nav  .navbar-nav .nav-item .nav-link.active::before{
+        opacity: 0;
     }
   
 }
-@media screen and (max-width:992px){
-    main .site_details h1{
-        font-size : 70px ;     
-      }
-    main .site_details p{
-        font-size: 25px ;
-    }
-    main .site_details .apps a{
-        padding :8px 10px ;
-    }
-    main .app_mockup img{
-        width : 100% ;
-    }
-}
 @media screen and (max-width:768px){
+
     main .site_details h1{
         font-size : 60px ;     
-      }
-    main .site_details p{
-        font-size: 20px ;
     }
-    main .app_mockup{
-        height: 540px 
-    }
-    main .app_mockup img{
+    main .app_mockup .slider_items img{
         width : 60% ; 
-    }
+    } 
     .header-shape-1{
         display: none;
     }
+
+
 }
 @media screen and (max-width:576px){
     main .site_details h1{
         font-size : 50px ;     
       }
-    main .site_details p{
-        font-size: 18px ;
+    main .site_details #slogon{
+        font-size: 18px !important ;
+        font-weight: 600;
     }
     main .site_details .apps a{
         padding-inline : 10px ;
     }
-    main .app_mockup img{
+    main .app_mockup .slider_items  img{
         width : 55% ; 
     }
    
 }
 @media screen and (max-width:470px){
-    main .app_mockup img{
-        width : 70% ; 
+    main .app_mockup  .slider_items img{
+        width : 60% ; 
     }
 }
 @media screen and (max-width:430px){
     main .site_details h1{
         font-size : 40px ;     
       }
-    main .site_details p{
+    main .site_details #slogon{
         font-size: 16px ;
     }
-    main .app_mockup img{
+    
+}
+@media screen and (max-width:350px){
+    main .app_mockup  .slider_items img{
         width : 80% ; 
     }
-    
+    main .site_details .apps a{
+        font-size:14px !important;
+    }
 }
 /* -==================================
 START:: SITE-DATA
 ==========================================*/
-footer{
-    height : 50px ;
-}
+

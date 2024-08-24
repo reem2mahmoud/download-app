@@ -25,19 +25,49 @@
   </head>
   <body>
     <!-- START : NAVBAR -->
-    <nav>
-      <div
-        class="mt-2 container d-flex justify-content-between align-items-center"
-      >
-        <a class="logo d-flex align-items-center gap-2" href="../index.html">
-          <img src="../assets/images/Logo.svg" alt="logo" />
-          <span>Ahlan</span>
-        </a>
-        <div class="language">
-          <a href="./terms_of_Service-rtl.html">العربية</a>
+    <div class="mt-2 container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+        <div class="container-fluid">
+          <a
+            class="logo navbar-brand d-flex align-items-center gap-2"
+            href="../index.html"
+          >
+            <img src="../assets/images/Logo.svg" alt="logo" />
+            <span>Ahlan</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav ms-auto d-flex gap-3 justify-content-center align-items-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">services</a>
+              </li>
+              <li class="nav-item ms-lg-5">
+                <a
+                  class="nav-link language ms-lg-5"
+                  href="./terms_of_Service-rtl.html"
+                  >العربية</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- END : NAVBAR -->
     <!-- START : SITE-DATA -->
     <main class="static_data px-3">
@@ -133,5 +163,13 @@
       </div>
     </footer>
     <!-- END : FOOTER -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".nav-link").on("click", function () {
+        $(".nav-link.active").removeClass("active");
+        $(this).addClass("active");
+      });
+    </script>
   </body>
 </html>

@@ -9,3 +9,9 @@
     left:0 ;
     transform : rotateY(180deg)
 }
+.slick-dots
+{
+    right:90% ;
+    left:auto ;
+    text-align: left;
+}

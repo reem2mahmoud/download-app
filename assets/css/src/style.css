@@ -25,6 +25,9 @@
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
   }
+  .bg-custom{
+    background-color : var(--sub-main-color)
+  }
   a{
     text-decoration: none !important;
   }
@@ -69,10 +72,13 @@
       border: 0;
       outline: none;
       background: white;
+      box-shadow: 0 15px 20px 0 rgb(0 0 0 / 10%);
   }
   .slick-dots li.slick-active button
   {
-    background: var(--forth-color)
+    background: var(--forth-color) ;
+    transition: all 1s;
+    transform: scale(2);
   }
 /* -==================================
 START:: NAVBAR
@@ -102,7 +108,7 @@ nav  .navbar-nav .nav-item .nav-link{
 nav .navbar-nav .nav-item .nav-link.active{
     color :var(--forth-color)
 }
-nav  .navbar-nav .nav-item .nav-link::before {
+nav  .navbar-nav .nav-item .nav-link:not(.language)::before {
     content: '';
     position: absolute;
     width: 8px;

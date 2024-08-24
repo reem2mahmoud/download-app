@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download App</title>
     <!--Google-Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Matemasie&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    /> -->
+    <!-- Rowdies -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Matemasie&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Matemasie&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Spline Sans Mono  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Matemasie&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
     />
     <!--Bootstrap  -->
     <link rel="stylesheet" href="assets/css/layout/bootstrap.rtl.min.css" />
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/layout/slick.css" />
+    <link rel="stylesheet" href="assets/css/layout/slick-theme.css" />
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/src/style.css" />
     <!-- RTL-Style -->
@@ -26,34 +31,59 @@
   </head>
   <body>
     <!-- START : NAVBAR -->
-    <nav>
-      <div
-        class="mt-2 container d-flex justify-content-between align-items-center"
-      >
-        <a class="logo d-flex align-items-center gap-2" href="#">
-          <img src="assets/images/Logo.svg" alt="logo" />
-          <span>Ahlan</span>
-        </a>
-        <div class="language">
-          <a href="./index.html">English</a>
+    <div class="mt-2 container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="logo navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="assets/images/Logo.svg" alt="logo" />
+            <span>Ahlan</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav ms-auto d-flex gap-3 justify-content-center align-items-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">services</a>
+              </li>
+              <li class="nav-item ms-lg-5">
+                <a class="nav-link language ms-lg-5" href="./index.html"
+                  >English</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- END : NAVBAR -->
     <!-- START : SITE-DATA -->
     <main>
-      <div class="container">
+      <div class="pb-0 mb-0 container">
         <div
-          class="site_main d-flex justify-content-center justify-content-md-between row"
+          class="site_main d-flex justify-content-center justify-content-lg-between row mb-0"
         >
           <!-- SLOGON -->
           <div
-            class="site_details col-md-7 col-lg-7 pt-5 text-center text-md-start"
+            class="position-relative site_details col-lg-7 pt-5 text-center text-lg-start"
           >
             <h1 class="mt-5 mb-3 app_name">Ahlan Chat</h1>
             <p id="slogon">work hard , party harder</p>
             <div
-              class="apps d-flex gap-4 my-4 justify-content-center justify-content-md-start"
+              class="apps d-flex gap-4 my-4 justify-content-center justify-content-lg-start"
             >
               <a class="btn app_store d-flex" type="button" href="#">
                 <svg
@@ -161,14 +191,43 @@
                 <p class="mb-0 mt-1 mx-1">Google Play</p>
               </a>
             </div>
+            <footer
+              class="d-none d-lg-block pb-4 w-100 position-absolute bottom-0"
+            >
+              <div
+                class="d-flex flex-column justify-content-center align-items-center"
+              >
+                <p class="mb-0">Copyright &copy; @livechat</p>
+                <div>
+                  <a href="pages/terms_of_Service-rtl.html">terms of service</a>
+                  <span class="mx-3">|</span>
+                  <a href="pages/privacy_policy-rtl.html">privacy policy</a
+                  ><span class="mx-3">|</span>
+                  <a href="pages/about_site-rtl.html">About site</a>
+                </div>
+              </div>
+            </footer>
           </div>
           <!-- MOCK-UP -->
-          <div class="app_mockup col-md-5 col-lg-5 text-center">
-            <img src="assets/images/mockup1.png" alt="app-mockup" />
+          <div class="app_mockup col-lg-5 mb-0 mt-2">
+            <div class="slider_items">
+              <p class="text-center mx-4 mb-1">
+                Lorem ipsum dolor sit amet11 .
+              </p>
+              <img src="assets/images/mockup4.png" alt="" />
+            </div>
+            <div class="slider_items">
+              <p class="text-center mx-4 mb-1">Lorem ipsum dolor sit amet22.</p>
+              <img src="assets/images/mockup4.png" alt="" />
+            </div>
+            <div class="slider_items">
+              <p class="text-center mx-4 mb-1">Lorem ipsum dolor sit amet33.</p>
+              <img src="assets/images/mockup4.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container pb-0 mb-0">
         <div class="header-shape-1"></div>
         <div class="header-shape-2">
           <img src="assets/images/header-shape-2.svg" alt="" />
@@ -178,7 +237,9 @@
     <!-- END : SITE-DATA -->
     <!-- START : FOOTER -->
     <footer>
-      <div class="d-flex flex-column justify-content-center align-items-center">
+      <div
+        class="d-block d-lg-none d-flex flex-column justify-content-center align-items-center"
+      >
         <p class="mb-0">Copyright &copy; @livechat</p>
         <div>
           <a href="pages/terms_of_Service-rtl.html">terms of service</a>
@@ -190,5 +251,26 @@
       </div>
     </footer>
     <!-- END : FOOTER -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+      $(".nav-link").on("click", function () {
+        $(".nav-link.active").removeClass("active");
+        $(this).addClass("active");
+      });
+      $(document).ready(function () {
+        $(".app_mockup").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          vertical: true,
+          arrows: false,
+          verticalSwiping: true,
+          autoplay: true,
+          speed: 300,
+        });
+      });
+    </script>
   </body>
 </html>
